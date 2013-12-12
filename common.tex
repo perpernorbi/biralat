@@ -1,0 +1,26 @@
+\usepackage{ifthen}
+
+\newcommand{\biralo}{Koszó Norbert}
+\newcommand{\jelolt}{Bódis-Szomorú András}
+\newcommand{\kepzes}{villamosmérnök} %villamosmérnök vagy informatikus
+\newcommand{\dolgozatcim}{Elektronikus terelők}
+\newcommand{\dolgozattipus}{diplomaterv} %szakdolgozat vagy diplomaterv kis betűvel!
+\newcommand{\erdemjegy}{jeles (5)}
+
+%Néhány egyéb command, ne piszkáld!
+\newcommand{\dolgozattipusahoz}{\ifthenelse{\equal{\dolgozattipus}{szakdolgozat}}{szakdolgozatához}{diplomatervéhez}}
+\newcommand{\dolgozattipusat}{\ifthenelse{\equal{\dolgozattipus}{szakdolgozat}}{szakdolgozatát}{diplomatervét}}
+\newcommand{\Dolgozattipus}{\ifthenelse{\equal{\dolgozattipus}{szakdolgozat}}{Szakdolgozat}{Diplomaterv}}
+\newcommand{\alairas}{
+\begin{flushleft}
+\vspace*{1cm}
+Budapest, \today
+\end{flushleft}
+
+\begin{flushright}
+ \vspace*{1cm}
+ \makebox[7cm]{\rule{6cm}{.4pt}}\\
+ \makebox[7cm]{\emph{\biralo}}\\
+ \makebox[7cm]{okleveles villamosmérnök}
+\end{flushright}
+}
