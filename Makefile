@@ -7,7 +7,10 @@ biralat.pdf: biralat.tex common.tex
 jegy.pdf: jegy.tex common.tex
 	pdflatex jegy.tex
 	
-all: nyomtatni.pdf
+boritek.pdf: boritek.tex common.tex
+	pdflatex boritek.tex
+
+all: nyomtatni.pdf boritek.pdf
 	
 clean: 
 	rm *.log *.aux *.pdf
