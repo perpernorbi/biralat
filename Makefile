@@ -1,5 +1,5 @@
 nyomtatni.pdf: biralat.pdf jegy.pdf
-	pdftk A=biralat.pdf B=jegy.pdf cat A A B output nyomtatni.pdf
+	pdftk A=biralat.pdf B=jegy.pdf cat A A A B output nyomtatni.pdf
 
 biralat.pdf: biralat.tex common.tex
 	pdflatex biralat.tex
