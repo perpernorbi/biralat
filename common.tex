@@ -25,3 +25,45 @@ Budapest, \today
  \makebox[7cm]{\biraloKepesites}
 \end{flushright}
 }
+
+
+
+%További generátorok ^_^
+\usepackage{arrayjob}
+
+% felépítés 1-3
+\newarray\felepitesopciok
+\readarray{felepitesopciok}{Összességében elmondható, hogy a dolgozat felépítése sok kívánnivalót hagy maga után, amely nagyban nehezíti a befogadását.&Összességében elmondható, hogy a dolgozat jól felépített tematika szerint halad; amely nem, vagy csak kis mértékben akadályozza a befogadását.&Összességében elmondható, hogy a dolgozat kiválóan felépített tematika szerint halad, amely nagyban segíti a befogadását.}
+\newcommand{\felepites}[1]{\felepitesopciok(#1)}
+
+% stílus és tartalom 1-3
+\newarray\stilusopciok
+\readarray{stilusopciok}{A stílus és a tartalom nem felelnek meg a műfaji és szakmai követelményeknek.&A stílus és a tartalom többnyire megfelelnek a műfaji és szakmai követelményeknek.&A stílus és a tartalom egyaránt megfelelnek a műfaji és szakmai követelményeknek.}
+\newcommand{\stilus}[1]{\stilusopciok(#1)}
+
+% érthetőség 1-3
+\newarray\erthetosegopciok
+\readarray{erthetosegopciok}{A dolgozat nehezen érthető, a mondanivalót egyedi ábrák és/vagy kódrészletek nem, vagy nem megfelelő módon támasztják alá.&A dolgozat jellemzően érthető, a mondanivalót további egyedi ábrák és/vagy kódrészletek mégjobban alátámasztották volna.&A dolgozat jól érthető, a mondanivalót jól megválasztott egyedi ábrák és/vagy kódrészletek támasztják alá.}
+\newcommand{\erthetoseg}[1]{\erthetosegopciok(#1)}
+
+% korrektura 1-3
+\newarray\korrekturaopciok
+\readarray{korrekturaopciok}{A dolgozat sok formázási hibát és elírást tartalmaz, melyeken egy ismételt átolvasás segíthetett volna.&A dolgozat néhány formázási hibától eltekintve, többé-kevésbé mentes az elírásoktól, melyeken egy ismételt átolvasás segíthetett volna.&A dolgozat néhány kisebb formázási hibától eltekintve, gyakorlatilag mentes az elírásoktól.}
+\newcommand{\korrektura}[1]{\korrekturaopciok(#1)}
+
+% kérdések
+\newcommand{\kerdes}[1]{\item #1}
+\newcommand{\kerdesek}[1]{
+    A dolgozattal kapcsolatban a következő kérdéseket tenném fel:
+    \setlength{\parskip}{0pt}
+    \begin{itemize}[noitemsep,nolistsep]
+        #1
+    \end{itemize}
+    \setlength{\parskip}{\baselineskip}
+}
+
+\newarray\osszessegebenopciok
+\readarray{osszessegebenopciok}{A dolgozatot összességében gyenge munkának tartom. A hallgató szakszerű, mérnöki hozzáállással nem analizálta a problémakört, a megoldás tárgyalása nincs logikusan felépítve és nem precíz.&A dolgozatot összességében jó munkának tartom. A hallgató szakszerű, mérnöki hozzáállással igyekezett analizálni a problémakört, a megoldás tárgyalása többnyire logikusan felépített és apróságokat leszámítva precíz, az alkalmazott technológiák megfelelően választottak.&A dolgozatot összességében kiváló munkának tartom. A hallgató szakszerű, mérnöki hozzáállással analizálta a problémakört, a megoldás tárgyalása logikusan felépített és precíz, az alkalmazott technológiák korszerűek.}
+\newcommand{\osszessegeben}[1]{\osszessegebenopciok(#1)}
+
+\newcommand{\elfogadas}[1]{\ifthenelse{\equal{#1}{igen}}{Összességében a szakdolgozat elfogadását javaslom.}{Összességében a szakdolgozat elfogadását nem javaslom.}}

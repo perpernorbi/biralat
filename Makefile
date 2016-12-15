@@ -3,16 +3,16 @@ nyomtatni.pdf: biralat.pdf jegy.pdf
 
 biralat.pdf: biralat.tex common.tex
 	pdflatex biralat.tex
-	
+
 jegy.pdf: jegy.tex common.tex
 	pdflatex jegy.tex
-	
+
 boritek.pdf: boritek.tex common.tex
 	pdflatex boritek.tex
 
 all: nyomtatni.pdf boritek.pdf
-	
-clean: 
-	rm *.log *.aux *.pdf
-	
+
+clean:
+	rm `cat .gitignore | tr '\n' ' '`
+
 .PHONY: clean all
