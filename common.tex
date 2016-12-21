@@ -66,4 +66,4 @@ Budapest, \today
 \readarray{osszessegebenopciok}{A dolgozatot összességében gyenge munkának tartom. A hallgató szakszerű, mérnöki hozzáállással nem analizálta a problémakört, a megoldás tárgyalása nincs logikusan felépítve és nem precíz.&A dolgozatot összességében jó munkának tartom. A hallgató szakszerű, mérnöki hozzáállással igyekezett analizálni a problémakört, a megoldás tárgyalása többnyire logikusan felépített és apróságokat leszámítva precíz, az alkalmazott technológiák megfelelően választottak.&A dolgozatot összességében kiváló munkának tartom. A hallgató szakszerű, mérnöki hozzáállással analizálta a problémakört, a megoldás tárgyalása logikusan felépített és precíz, az alkalmazott technológiák korszerűek.}
 \newcommand{\osszessegeben}[1]{\osszessegebenopciok(#1)}
 
-\newcommand{\elfogadas}[1]{\ifthenelse{\equal{#1}{igen}}{Összességében a szakdolgozat elfogadását javaslom.}{Összességében a szakdolgozat elfogadását nem javaslom.}}
+\newcommand{\elfogadas}[1]{\ifthenelse{\equal{#1}{igen}}{Összességében a \dolgozattipus{} elfogadását javaslom.}{Összességében a \dolgozattipus{} elfogadását nem javaslom.}}
